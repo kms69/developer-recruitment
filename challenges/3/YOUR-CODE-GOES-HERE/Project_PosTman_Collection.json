@@ -1,0 +1,914 @@
+{
+	"info": {
+		"_postman_id": "1f422887-6ad4-420b-ae9f-8f5b484e796a",
+		"name": "rec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17608241"
+	},
+	"item": [
+		{
+			"name": "User/Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "john",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "jamali",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Driver/SignUp",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "car_model",
+							"value": "jamali",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "2222222",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "11111",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "WORKING",
+							"type": "text"
+						},
+						{
+							"key": "car_plate",
+							"value": "45678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/driver",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/Store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "passenger_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "driver_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "SEARCHING_FOR_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel_spot/Store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "23333",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "3333333",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "445555",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/spots",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"spots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/take",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ACCEPT_BY_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/take",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"take"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/cancel",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ACCEPT_BY_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/cancel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel_spot/Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ACCEPT_BY_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/spots/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"spots",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel_spot/arrived",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "spot_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/spots/1/arrived",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"spots",
+						"1",
+						"arrived"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/view",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ACCEPT_BY_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/done",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ACCEPT_BY_DRIVER",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/done",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"done"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Travel/Passenger_on_Board",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "travel_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/travels/1/passenger-on-board",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"travels",
+						"1",
+						"passenger-on-board"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Driver/Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "car_model",
+							"value": "peykan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "33336666",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "111110009999",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "WORKING",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/driver/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"driver",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Driver/view",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|mGPt3YfgOTlc6umW2WXGBK0tliJaxcuo8Yoc37eQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "car_model",
+							"value": "peykan",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "latitude",
+							"value": "33336666",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "111110009999",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "WORKING",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/driver/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"driver",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "john",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "jamali",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
